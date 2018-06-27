@@ -7,8 +7,7 @@
            REPLACE(i.name, '.', '_') as IndexName,
            co.[name] as ColumnName,
            i.is_unique,
-           i.is_primary_key,
-           i.filter_definition
+           i.is_primary_key
 
     from sys.indexes i
          join sys.objects o on i.object_id = o.object_id
